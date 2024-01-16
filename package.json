@@ -8,9 +8,7 @@
   "scripts": {
     "build": "#flatc --gen-object-api --ts --ts-no-import-ext -o lib/ src/*",
     "build:lib": "rm -rf lib/ && mkdir -p lib/ && cp -R node_modules/mediasoup/node/lib/fbs/* lib/",
-    "prepare": "npm run build:lib",
-    "release": "scripts/release.js",
-    "update": "scripts/update.js"
+    "prepare": "npm run build:lib"
   },
   "keywords": [
     "Mediasoup",

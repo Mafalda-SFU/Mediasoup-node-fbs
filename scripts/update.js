@@ -25,14 +25,10 @@ function isNotRustRelease({tag_name})
 
 (async function()
 {
-  const releases = await fetch(`https://api.github.com/repos/${repo}/releases`)
-    .then(res => res.json())
-
-  const {url} = releases.find(isNotRustRelease)
-
   const [{tag_name: version, tarball_url}, pkgJson] = await Promise.all([
-    fetch(url)
-    .then(res => res.json()),
+    fetch(`https://api.github.com/repos/${repo}/releases`)
+      .then(res => res.json())
+      .then(releases => releases.find(isNotRustRelease)),
     PackageJson.load('.')
   ])
 
@@ -93,28 +89,10 @@ function isNotRustRelease({tag_name})
     entry.resume()
   }
 
+  // Check if there have been file changes
   const git = simpleGit()
   const {files: {length}} = await git.status()
   if(!length) return
-
-  const {
-    content: {
-      dependencies, devDependencies, optionalDependencies, peerDependencies
-    }
-  } = pkgJson
-
-  pkgJson.update({
-    dependencies,
-    devDependencies: {
-      ...devDependencies,
-      mediasoup: version
-    },
-    optionalDependencies,
-    peerDependencies,
-    version
-  })
-
-  await pkgJson.save()
 
   // Print new version
   console.log(version)
