@@ -3,7 +3,7 @@
   "version": "3.13.16",
   "description": "Node.js tests extracted from Mediasoup",
   "exports": {
-    "./*": "./lib/*"
+    "./*": "./lib/*.js"
   },
   "scripts": {
     "build": "#flatc --gen-object-api --ts --ts-no-import-ext -o lib/ src/*",
