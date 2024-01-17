@@ -1,20 +1,20 @@
 {
-  "name": "@mafalda-sfu/mediasoup-node-tests",
+  "name": "@mafalda-sfu/mediasoup-node-fbs",
   "version": "3.13.16",
-  "description": "Node.js tests extracted from Mediasoup",
+  "description": "Node.js flatbuffers extracted from Mediasoup",
   "exports": {
     "./*": "./lib/*.js"
   },
   "scripts": {
-    "build": "#flatc --gen-object-api --ts --ts-no-import-ext -o lib/ src/*",
-    "build:lib": "rm -rf lib/ && mkdir -p lib/ && cp -R node_modules/mediasoup/node/lib/fbs/* lib/",
-    "prepare": "npm run build:lib"
+    "build": "rm -rf lib/ && mkdir -p lib/ && cp -R node_modules/mediasoup/node/lib/fbs/* lib/",
+    "build:orig": "#flatc --gen-object-api --ts --ts-no-import-ext -o lib/ src/*",
+    "prepare": "npm run build"
   },
   "keywords": [
     "Mediasoup",
     "Mafalda",
     "SFU",
-    "tests"
+    "flatbuffers"
   ],
   "author": "Jesús Leganés-Combarro 'piranna' (https://piranna.github.io)",
   "license": "ISC",
@@ -32,10 +32,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Mafalda-SFU/Mediasoup-node-tests.git"
+    "url": "git+https://github.com/Mafalda-SFU/Mediasoup-node-fbs.git"
   },
   "bugs": {
-    "url": "https://github.com/Mafalda-SFU/Mediasoup-node-tests/issues"
+    "url": "https://github.com/Mafalda-SFU/Mediasoup-node-fbs/issues"
   },
-  "homepage": "https://mafalda.io/Mediasoup-node-tests"
+  "homepage": "https://mafalda.io/Mediasoup-node-fbs"
 }

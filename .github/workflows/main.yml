@@ -102,10 +102,10 @@ jobs:
         if : ${{ steps.update.outputs.new_version != '' }}
         run: npm install --verbose
 
-      # Ensure extracted tests are working
-      - name: Run tests
+      # Ensure extracted framebuffers are working
+      - name: Build flatbuffers
         if : ${{ steps.update.outputs.new_version != '' }}
-        run: npm test
+        run: npm run build
 
       # Commit and push changes
       - name: Commit and push changes
