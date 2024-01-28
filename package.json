@@ -19,11 +19,8 @@
   "author": "Jesús Leganés-Combarro 'piranna' (https://piranna.github.io)",
   "license": "ISC",
   "devDependencies": {
-    "@npmcli/package-json": "^5.0.0",
     "@types/node": "^20.11.5",
     "mediasoup": "^3.13.16",
-    "semver": "^7.5.4",
-    "simple-git": "^3.22.0",
     "tar-stream": "^3.1.6"
   },
   "main": "index.js",
