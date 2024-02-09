@@ -19,7 +19,7 @@
   "author": "Jesús Leganés-Combarro 'piranna' (https://piranna.github.io)",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^20.11.16",
+    "@types/node": "^20.11.17",
     "mediasoup": "^3.13.18",
     "tar-stream": "^3.1.7"
   },
