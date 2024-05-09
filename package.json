@@ -1,6 +1,6 @@
 {
   "name": "@mafalda-sfu/mediasoup-node-fbs",
-  "version": "3.14.5",
+  "version": "3.14.6",
   "description": "Node.js flatbuffers extracted from Mediasoup",
   "exports": {
     "./*": "./lib/fbs/*.js"
@@ -19,8 +19,8 @@
   "author": "Jesús Leganés-Combarro 'piranna' (https://piranna.github.io)",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^20.12.8",
-    "mediasoup": "^3.14.5",
+    "@types/node": "^20.12.11",
+    "mediasoup": "^3.14.6",
     "tar-stream": "^3.1.7"
   },
   "main": "index.js",
