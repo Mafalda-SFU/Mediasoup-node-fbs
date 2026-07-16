@@ -1,6 +1,6 @@
 {
   "name": "@mafalda-sfu/mediasoup-node-fbs",
-  "version": "3.21.1",
+  "version": "3.21.2",
   "description": "Node.js flatbuffers extracted from Mediasoup",
   "exports": {
     "./*": "./lib/fbs/*.js"
@@ -20,7 +20,7 @@
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^22.20.1",
-    "mediasoup": "^3.21.1",
+    "mediasoup": "^3.21.2",
     "tar-stream": "^3.2.0"
   },
   "main": "index.js",
